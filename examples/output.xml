@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?iec61970-552 version="2.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cim="http://iec.ch/TC57/2014/CIM-schema-cim16#" xmlns:me="http://monitel.com/2014/schema-cim16#" xmlns:demo="https://example.invalid/cim-demo#">
+<cim:GeographicalRegion rdf:about="#_fb8a57ce-5eb8-4ade-a68d-53f2b91d4f2b">
+    <cim:IdentifiedObject.name>Учебный регион</cim:IdentifiedObject.name>
+  </cim:GeographicalRegion>
+  <cim:SubGeographicalRegion rdf:about="#_beb84439-15c8-462d-a7ef-f55ce4eafdaa">
+    <cim:IdentifiedObject.name>Демонстрационный район</cim:IdentifiedObject.name>
+    <cim:SubGeographicalRegion.Region rdf:resource="#_fb8a57ce-5eb8-4ade-a68d-53f2b91d4f2b"></cim:SubGeographicalRegion.Region>
+  </cim:SubGeographicalRegion>
+  <cim:BaseVoltage rdf:about="#_a3c96a1d-7ed9-4546-8bb6-1f009bab27d0">
+    <cim:IdentifiedObject.name>110 kV</cim:IdentifiedObject.name>
+    <cim:BaseVoltage.nominalVoltage>110</cim:BaseVoltage.nominalVoltage>
+  </cim:BaseVoltage>
+  <cim:Location rdf:about="#_9d0a2716-bd55-4aa5-8e1c-62808ff85068">
+    <cim:IdentifiedObject.name>Turnip Object 000006</cim:IdentifiedObject.name>
+  </cim:Location>
+  <cim:PositionPoint rdf:about="#_3aa596a4-2882-4218-90ad-68833d7f6ab4">
+    <cim:PositionPoint.Location rdf:resource="#_9d0a2716-bd55-4aa5-8e1c-62808ff85068"></cim:PositionPoint.Location>
+    <cim:PositionPoint.sequenceNumber>1</cim:PositionPoint.sequenceNumber>
+    <cim:PositionPoint.xPosition>8.1250</cim:PositionPoint.xPosition>
+    <cim:PositionPoint.yPosition>12.5000</cim:PositionPoint.yPosition>
+  </cim:PositionPoint>
+  <cim:Substation rdf:about="#_201251c1-0b47-4e93-91b5-1608a4a86f6e">
+    <cim:IdentifiedObject.mRID>201251c1-0b47-4e93-91b5-1608a4a86f6e</cim:IdentifiedObject.mRID>
+    <cim:IdentifiedObject.name>Carrot Substation 110 kV 000007</cim:IdentifiedObject.name>
+    <cim:IdentifiedObject.description>[Redacted]</cim:IdentifiedObject.description>
+    <cim:Substation.Region rdf:resource="#_beb84439-15c8-462d-a7ef-f55ce4eafdaa"></cim:Substation.Region>
+    <cim:PowerSystemResource.Location rdf:resource="#_9d0a2716-bd55-4aa5-8e1c-62808ff85068"></cim:PowerSystemResource.Location>
+  </cim:Substation>
+  <cim:Substation rdf:about="#_c15b87b5-fa4a-404f-830b-da6dab7b969d">
+    <cim:IdentifiedObject.name>Lemon Substation 110 kV 000008</cim:IdentifiedObject.name>
+    <cim:Substation.Region rdf:resource="#_beb84439-15c8-462d-a7ef-f55ce4eafdaa"></cim:Substation.Region>
+  </cim:Substation>
+  <cim:VoltageLevel rdf:about="#_ef45399a-7d08-4ad4-9d40-7328c5a93bfc">
+    <cim:IdentifiedObject.name>Cabbage Object 110 kV 000009</cim:IdentifiedObject.name>
+    <cim:VoltageLevel.Substation rdf:resource="#_201251c1-0b47-4e93-91b5-1608a4a86f6e"></cim:VoltageLevel.Substation>
+    <cim:VoltageLevel.BaseVoltage rdf:resource="#_a3c96a1d-7ed9-4546-8bb6-1f009bab27d0"></cim:VoltageLevel.BaseVoltage>
+  </cim:VoltageLevel>
+  <cim:VoltageLevel rdf:about="#_b669286e-7b28-4fb2-adc4-8f0734c2fd84">
+    <cim:IdentifiedObject.name>Celery Object 110 kV 000010</cim:IdentifiedObject.name>
+    <cim:VoltageLevel.Substation rdf:resource="#_c15b87b5-fa4a-404f-830b-da6dab7b969d"></cim:VoltageLevel.Substation>
+    <cim:VoltageLevel.BaseVoltage rdf:resource="#_a3c96a1d-7ed9-4546-8bb6-1f009bab27d0"></cim:VoltageLevel.BaseVoltage>
+  </cim:VoltageLevel>
+  <cim:ConnectivityNode rdf:about="#_4da65892-9368-46a3-a72d-1d75f572e425">
+    <cim:IdentifiedObject.name>Tomato Object 000011</cim:IdentifiedObject.name>
+    <cim:ConnectivityNode.ConnectivityNodeContainer rdf:resource="#_ef45399a-7d08-4ad4-9d40-7328c5a93bfc"></cim:ConnectivityNode.ConnectivityNodeContainer>
+  </cim:ConnectivityNode>
+  <cim:ConnectivityNode rdf:about="#_45e4056a-6adf-4f9b-ab35-cba1bd4e6d13">
+    <cim:IdentifiedObject.name>Apricot Object 000012</cim:IdentifiedObject.name>
+    <cim:ConnectivityNode.ConnectivityNodeContainer rdf:resource="#_b669286e-7b28-4fb2-adc4-8f0734c2fd84"></cim:ConnectivityNode.ConnectivityNodeContainer>
+  </cim:ConnectivityNode>
+  <cim:Line rdf:about="#_3bbb2bcb-a4ed-4456-82e8-ac1de9328d14">
+    <cim:IdentifiedObject.name>Garlic Line 110 kV 000013</cim:IdentifiedObject.name>
+  </cim:Line>
+  <cim:ACLineSegment rdf:about="#_45a57e68-8c95-4f5a-beb4-5629fd184095">
+    <cim:IdentifiedObject.name>Garlic Line 110 kV 000013</cim:IdentifiedObject.name>
+    <cim:Equipment.EquipmentContainer rdf:resource="#_3bbb2bcb-a4ed-4456-82e8-ac1de9328d14"></cim:Equipment.EquipmentContainer>
+    <cim:Equipment.normallyInService>true</cim:Equipment.normallyInService>
+    <cim:ConductingEquipment.BaseVoltage rdf:resource="#_a3c96a1d-7ed9-4546-8bb6-1f009bab27d0"></cim:ConductingEquipment.BaseVoltage>
+    <cim:Conductor.length>4.2</cim:Conductor.length>
+    <cim:ACLineSegment.r>0.81</cim:ACLineSegment.r>
+    <cim:ACLineSegment.x>1.37</cim:ACLineSegment.x>
+    <demo:Asset.inventoryNumber>SRDZ-332876</demo:Asset.inventoryNumber>
+    <me:ACLineSegment.sections>PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0ndXRmLTgnPz4KPFNlY3Rpb25zPjxTZWN0aW9uIFNlcXVlbmNlTnVtYmVyPSIxIiBOYW1lPSJDYWJiYWdlIExpbmUgMDAwMDE0IiBMZW5ndGg9IjIuNSIgUjE9IjAuMTgiIFgxPSIwLjMyIiBJc0NhYmxlPSJmYWxzZSIgLz48U2VjdGlvbiBTZXF1ZW5jZU51bWJlcj0iMiIgTmFtZT0iTWVsb24gTGluZSAwMDAwMTUiIExlbmd0aD0iMS43IiBSMT0iMC4yMSIgWDE9IjAuMzUiIElzQ2FibGU9ImZhbHNlIiAvPjwvU2VjdGlvbnM+</me:ACLineSegment.sections>
+  </cim:ACLineSegment>
+  <cim:Terminal rdf:about="#_8f1e8232-a37d-41b1-9ad9-79d6d17c0e53">
+    <cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+    <cim:Terminal.ConductingEquipment rdf:resource="#_45a57e68-8c95-4f5a-beb4-5629fd184095"></cim:Terminal.ConductingEquipment>
+    <cim:Terminal.ConnectivityNode rdf:resource="#_4da65892-9368-46a3-a72d-1d75f572e425"></cim:Terminal.ConnectivityNode>
+    <cim:Terminal.phases rdf:resource="cim:PhaseCode.ABC"></cim:Terminal.phases>
+  </cim:Terminal>
+  <cim:Terminal rdf:about="#_ec5ac6f1-a128-4a27-a657-3d75d067789c">
+    <cim:ACDCTerminal.sequenceNumber>2</cim:ACDCTerminal.sequenceNumber>
+    <cim:Terminal.ConductingEquipment rdf:resource="#_45a57e68-8c95-4f5a-beb4-5629fd184095"></cim:Terminal.ConductingEquipment>
+    <cim:Terminal.ConnectivityNode rdf:resource="#_45e4056a-6adf-4f9b-ab35-cba1bd4e6d13"></cim:Terminal.ConnectivityNode>
+    <cim:Terminal.phases rdf:resource="cim:PhaseCode.ABC"></cim:Terminal.phases>
+  </cim:Terminal>
+  <cim:Organisation rdf:about="#_c595eba4-5ee1-4889-b39b-2d615238ee35">
+    <cim:IdentifiedObject.name>Pear Company 000016</cim:IdentifiedObject.name>
+    <demo:Organisation.inn>2890711229</demo:Organisation.inn>
+    <demo:Organisation.kpp>231134932</demo:Organisation.kpp>
+  </cim:Organisation>
+  <cim:Person rdf:about="#_74730b48-7da6-4548-9690-39c96dd2fa76">
+    <cim:IdentifiedObject.name>Borinin-1 Borin Borinon</cim:IdentifiedObject.name>
+    <cim:Person.firstName>Borin</cim:Person.firstName>
+    <cim:Person.lastName>Borinin-1</cim:Person.lastName>
+    <demo:Person.patronymic>Borinon</demo:Person.patronymic>
+    <demo:Person.email>borin.1@example.invalid</demo:Person.email>
+    <demo:Person.phone>+5 (155) 074-53-56</demo:Person.phone>
+    <demo:Person.streetName>Street Borinin-1</demo:Person.streetName>
+    <me:Person.Organisation rdf:resource="#_c595eba4-5ee1-4889-b39b-2d615238ee35"></me:Person.Organisation>
+  </cim:Person>
+  <cim:Customer rdf:about="#_1ab48b32-056c-4deb-b402-2c29e14c5f26">
+    <cim:IdentifiedObject.name>Tarinin-2 Tarin Tarinon</cim:IdentifiedObject.name>
+    <me:Customer.OMSKind rdf:resource="#_a96ccf37-4b93-4b24-bd5c-f701b1eec11f"></me:Customer.OMSKind>
+    <demo:Customer.accountNumber>124391798524</demo:Customer.accountNumber>
+  </cim:Customer>
+  <me:OMSCustomerKind rdf:about="#_a96ccf37-4b93-4b24-bd5c-f701b1eec11f">
+    <cim:IdentifiedObject.name>Natural person</cim:IdentifiedObject.name>
+  </me:OMSCustomerKind>
+  <cim:NameType rdf:about="#_11ed69c6-42d1-4669-9cd9-639ca122eac7">
+    <cim:NameType.name>DisplayLabel</cim:NameType.name>
+  </cim:NameType>
+  <cim:Name rdf:about="#_78d88ae9-8d6e-4d78-8608-fdd71b800146">
+    <cim:Name.name>Carrot Substation 110 kV 000007</cim:Name.name>
+    <cim:Name.IdentifiedObject rdf:resource="#_201251c1-0b47-4e93-91b5-1608a4a86f6e"></cim:Name.IdentifiedObject>
+    <cim:Name.NameType rdf:resource="#_11ed69c6-42d1-4669-9cd9-639ca122eac7"></cim:Name.NameType>
+  </cim:Name>
+  <me:MeasValueDirectOperand rdf:about="#_07b3fa46-eaf4-49ef-bb10-d489be59c8f1">
+    <cim:IdentifiedObject.name>s_turnip_3d11cde41aad466a978cda3ed6d5b918</cim:IdentifiedObject.name>
+  </me:MeasValueDirectOperand>
+  <me:Expression rdf:about="#_306eedc1-f26a-426e-949c-cc77b0b2a353">
+    <me:Expression.formula>s_turnip_3d11cde41aad466a978cda3ed6d5b918 * 2 + 1</me:Expression.formula>
+  </me:Expression>
+
+</rdf:RDF>

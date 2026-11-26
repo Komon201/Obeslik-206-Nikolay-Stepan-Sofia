@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?iec61970-552 version="2.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:cim="http://iec.ch/TC57/2014/CIM-schema-cim16#"
+         xmlns:me="http://monitel.com/2014/schema-cim16#"
+         xmlns:demo="https://example.invalid/cim-demo#">
+  <cim:GeographicalRegion rdf:about="#training-region">
+    <cim:IdentifiedObject.name>Учебный регион</cim:IdentifiedObject.name>
+  </cim:GeographicalRegion>
+  <cim:SubGeographicalRegion rdf:about="#training-district">
+    <cim:IdentifiedObject.name>Демонстрационный район</cim:IdentifiedObject.name>
+    <cim:SubGeographicalRegion.Region rdf:resource="#training-region"/>
+  </cim:SubGeographicalRegion>
+  <cim:BaseVoltage rdf:about="#voltage-110">
+    <cim:IdentifiedObject.name>110 kV</cim:IdentifiedObject.name>
+    <cim:BaseVoltage.nominalVoltage>110</cim:BaseVoltage.nominalVoltage>
+  </cim:BaseVoltage>
+  <cim:Location rdf:about="#north-location">
+    <cim:IdentifiedObject.name>Учебная площадка Северная</cim:IdentifiedObject.name>
+  </cim:Location>
+  <cim:PositionPoint rdf:about="#north-position">
+    <cim:PositionPoint.Location rdf:resource="#north-location"/>
+    <cim:PositionPoint.sequenceNumber>1</cim:PositionPoint.sequenceNumber>
+    <cim:PositionPoint.xPosition>8.1250</cim:PositionPoint.xPosition>
+    <cim:PositionPoint.yPosition>12.5000</cim:PositionPoint.yPosition>
+  </cim:PositionPoint>
+  <cim:Substation rdf:about="#_11111111-2222-4333-8444-555555555555">
+    <cim:IdentifiedObject.mRID>11111111-2222-4333-8444-555555555555</cim:IdentifiedObject.mRID>
+    <cim:IdentifiedObject.name>ПС Учебная Северная 110 кВ</cim:IdentifiedObject.name>
+    <cim:IdentifiedObject.description>Учебная запись: ответственная Дария Тестовна.</cim:IdentifiedObject.description>
+    <cim:Substation.Region rdf:resource="#training-district"/>
+    <cim:PowerSystemResource.Location rdf:resource="#north-location"/>
+  </cim:Substation>
+  <cim:Substation rdf:about="#south-station">
+    <cim:IdentifiedObject.name>ПС Учебная Южная 110 кВ</cim:IdentifiedObject.name>
+    <cim:Substation.Region rdf:resource="#training-district"/>
+  </cim:Substation>
+  <cim:VoltageLevel rdf:about="#north-level">
+    <cim:IdentifiedObject.name>Северный уровень 110 кВ</cim:IdentifiedObject.name>
+    <cim:VoltageLevel.Substation rdf:resource="#_11111111-2222-4333-8444-555555555555"/>
+    <cim:VoltageLevel.BaseVoltage rdf:resource="#voltage-110"/>
+  </cim:VoltageLevel>
+  <cim:VoltageLevel rdf:about="#south-level">
+    <cim:IdentifiedObject.name>Южный уровень 110 кВ</cim:IdentifiedObject.name>
+    <cim:VoltageLevel.Substation rdf:resource="#south-station"/>
+    <cim:VoltageLevel.BaseVoltage rdf:resource="#voltage-110"/>
+  </cim:VoltageLevel>
+  <cim:ConnectivityNode rdf:about="#north-node">
+    <cim:IdentifiedObject.name>Северный учебный узел</cim:IdentifiedObject.name>
+    <cim:ConnectivityNode.ConnectivityNodeContainer rdf:resource="#north-level"/>
+  </cim:ConnectivityNode>
+  <cim:ConnectivityNode rdf:about="#south-node">
+    <cim:IdentifiedObject.name>Южный учебный узел</cim:IdentifiedObject.name>
+    <cim:ConnectivityNode.ConnectivityNodeContainer rdf:resource="#south-level"/>
+  </cim:ConnectivityNode>
+  <cim:Line rdf:about="#demo-line">
+    <cim:IdentifiedObject.name>ЛЭП Учебная Связующая 110 кВ</cim:IdentifiedObject.name>
+  </cim:Line>
+  <cim:ACLineSegment rdf:about="#line-segment">
+    <cim:IdentifiedObject.name>ЛЭП Учебная Связующая 110 кВ</cim:IdentifiedObject.name>
+    <cim:Equipment.EquipmentContainer rdf:resource="#demo-line"/>
+    <cim:Equipment.normallyInService>true</cim:Equipment.normallyInService>
+    <cim:ConductingEquipment.BaseVoltage rdf:resource="#voltage-110"/>
+    <cim:Conductor.length>4.2</cim:Conductor.length>
+    <cim:ACLineSegment.r>0.81</cim:ACLineSegment.r>
+    <cim:ACLineSegment.x>1.37</cim:ACLineSegment.x>
+    <demo:Asset.inventoryNumber>TEST-001237</demo:Asset.inventoryNumber>
+    <me:ACLineSegment.sections>PFNlY3Rpb25zPjxTZWN0aW9uIFNlcXVlbmNlTnVtYmVyPSIxIiBOYW1lPSImIzEwNTk7JiMxMDk1OyYjMTA3NzsmIzEwNzM7JiMxMDg1OyYjMTA5OTsmIzEwODE7ICYjMTA5MTsmIzEwOTU7JiMxMDcyOyYjMTA4OTsmIzEwOTA7JiMxMDg2OyYjMTA4MjsgQSIgTGVuZ3RoPSIyLjUiIFIxPSIwLjE4IiBYMT0iMC4zMiIgSXNDYWJsZT0iZmFsc2UiLz48U2VjdGlvbiBTZXF1ZW5jZU51bWJlcj0iMiIgTmFtZT0iJiMxMDU5OyYjMTA5NTsmIzEwNzc7JiMxMDczOyYjMTA4NTsmIzEwOTk7JiMxMDgxOyAmIzEwOTE7JiMxMDk1OyYjMTA3MjsmIzEwODk7JiMxMDkwOyYjMTA4NjsmIzEwODI7IEIiIExlbmd0aD0iMS43IiBSMT0iMC4yMSIgWDE9IjAuMzUiIElzQ2FibGU9ImZhbHNlIi8+PC9TZWN0aW9ucz4=</me:ACLineSegment.sections>
+  </cim:ACLineSegment>
+  <cim:Terminal rdf:about="#north-terminal">
+    <cim:ACDCTerminal.sequenceNumber>1</cim:ACDCTerminal.sequenceNumber>
+    <cim:Terminal.ConductingEquipment rdf:resource="#line-segment"/>
+    <cim:Terminal.ConnectivityNode rdf:resource="#north-node"/>
+    <cim:Terminal.phases rdf:resource="cim:PhaseCode.ABC"/>
+  </cim:Terminal>
+  <cim:Terminal rdf:about="#south-terminal">
+    <cim:ACDCTerminal.sequenceNumber>2</cim:ACDCTerminal.sequenceNumber>
+    <cim:Terminal.ConductingEquipment rdf:resource="#line-segment"/>
+    <cim:Terminal.ConnectivityNode rdf:resource="#south-node"/>
+    <cim:Terminal.phases rdf:resource="cim:PhaseCode.ABC"/>
+  </cim:Terminal>
+  <cim:Organisation rdf:about="#demo-company">
+    <cim:IdentifiedObject.name>ООО «Учебная энергосеть»</cim:IdentifiedObject.name>
+    <demo:Organisation.inn>0000000000</demo:Organisation.inn>
+    <demo:Organisation.kpp>000000000</demo:Organisation.kpp>
+  </cim:Organisation>
+  <cim:Person rdf:about="#demo-operator">
+    <cim:IdentifiedObject.name>Дария Тестовна Примерная</cim:IdentifiedObject.name>
+    <cim:Person.firstName>Дария</cim:Person.firstName>
+    <cim:Person.lastName>Примерная</cim:Person.lastName>
+    <demo:Person.patronymic>Тестовна</demo:Person.patronymic>
+    <demo:Person.email>operator@training.invalid</demo:Person.email>
+    <demo:Person.phone>+0 (000) 000-00-00</demo:Person.phone>
+    <demo:Person.streetName>Учебная улица</demo:Person.streetName>
+    <me:Person.Organisation rdf:resource="#demo-company"/>
+  </cim:Person>
+  <cim:Customer rdf:about="#demo-customer">
+    <cim:IdentifiedObject.name>Алекс Примеров Учебный</cim:IdentifiedObject.name>
+    <me:Customer.OMSKind rdf:resource="#physical-person"/>
+    <demo:Customer.accountNumber>000000123456</demo:Customer.accountNumber>
+  </cim:Customer>
+  <me:OMSCustomerKind rdf:about="#physical-person">
+    <cim:IdentifiedObject.name>Natural person</cim:IdentifiedObject.name>
+  </me:OMSCustomerKind>
+  <cim:NameType rdf:about="#display-label">
+    <cim:NameType.name>DisplayLabel</cim:NameType.name>
+  </cim:NameType>
+  <cim:Name rdf:about="#north-alias">
+    <cim:Name.name>ПС Учебная Северная 110 кВ</cim:Name.name>
+    <cim:Name.IdentifiedObject rdf:resource="#_11111111-2222-4333-8444-555555555555"/>
+    <cim:Name.NameType rdf:resource="#display-label"/>
+  </cim:Name>
+  <me:MeasValueDirectOperand rdf:about="#measurement">
+    <cim:IdentifiedObject.name>demo_measurement</cim:IdentifiedObject.name>
+  </me:MeasValueDirectOperand>
+  <me:Expression rdf:about="#demo-formula">
+    <me:Expression.formula>demo_measurement * 2 + 1</me:Expression.formula>
+  </me:Expression>
+</rdf:RDF>

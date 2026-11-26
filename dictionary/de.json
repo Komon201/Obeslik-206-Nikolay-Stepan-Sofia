@@ -1,0 +1,17 @@
+{
+  "language_name":  "Немецкий",
+  "fruits": [ "Apfel", "Birne", "Kirsche", "Pflaume", "Karotte" ],
+  "people": [ "Lio", "Mira", "Taro", "Lina" ],
+  "surname": "er",
+  "middle": "mann",
+  "object": "Objekt",
+  "substation": "Umspannwerk",
+  "transformer": "Transformatorstation",
+  "line": "Leitung",
+  "point": "Schaltstation",
+  "organization": "Unternehmen",
+  "street": "Straße",
+  "address": "Adresse",
+  "voltage": "kV",
+  "redacted": "[Entfernt]"
+}
